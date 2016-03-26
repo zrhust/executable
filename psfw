@@ -1,0 +1,22 @@
+#!/usr/bin/expect
+#
+
+set timeout 30
+spawn telnet emmrtcapp21.tl.islab.ibm.com
+expect "Username:" 
+send "zhangrsh@cn.ibm.com\n"
+expect "Password:"
+send "<password>\n"
+sleep 2
+spawn telnet tealeaf02.svl.ibm.com
+expect "Username:"
+send "zhangrsh@cn.ibm.com\n"
+expect "Password:"
+send "<password>\n"
+sleep 2
+spawn telnet 9.119.43.97
+expect "Username:"
+send "zhangrsh@cn.ibm.com\n"
+expect "Password:"
+send "<password>\n"
+sleep 2

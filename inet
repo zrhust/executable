@@ -1,0 +1,8 @@
+#!/usr/bin/expect
+#
+
+set timeout 30
+spawn ssh -N -f -D 127.0.0.1:8384 root@9.11.110.210
+expect "password:"
+send "<password>\r"
+interact
